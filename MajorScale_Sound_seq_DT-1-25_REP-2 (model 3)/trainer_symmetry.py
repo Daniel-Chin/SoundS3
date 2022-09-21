@@ -193,10 +193,11 @@ class BallTrainer:
 
             R_loss = (torch.zeros(2))
             Z_loss = (torch.zeros(2))
-            T_loss = self.batch_symm_loss(
-                z_gt_p, z0_rnn, T_sample_points, DT_BATCH_MULTIPLE,
-                lambda z: symm_trans(z, T), lambda z: symm_trans(z, Tr)
-            )
+            # T_loss = self.batch_symm_loss(
+            #     z_gt_p, z0_rnn, T_sample_points, DT_BATCH_MULTIPLE,
+            #     lambda z: symm_trans(z, T), lambda z: symm_trans(z, Tr)
+            # )
+            T_loss = (torch.zeros(2))
             loss = self.loss_func(vae_loss, rnn_loss, T_loss, R_loss, Z_loss, train_loss_counter)
             loss.backward()
             optimizer.step()

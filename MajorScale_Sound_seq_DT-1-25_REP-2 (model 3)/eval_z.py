@@ -38,7 +38,7 @@ DIY_WAVE_NAME = IMG_ROOT + "/diy_wave.wav"
 WAV_PATH = '../datasets/raising_falling_seq_midi_multi_instru_major_scale_wav/'
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-MODEL_PATH = 'checkpoint_150000.pt'
+MODEL_PATH = 'Conv2dGruConv2d_symmetry.pt'
 n_fft = 2046
 win_length = None
 hop_length = 512
